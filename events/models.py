@@ -17,17 +17,17 @@ class Event(models.Model):
  		(SQUARE_SIZE, 'square'),
 	)
 
-	name       = models.CharField(max_length=40)
-	description = models.TextField(max_length=550)
-	size = models.IntegerField(max_length=6, choices=sizes, default=SQUARE_SIZE)
-	image = models.ImageField(upload_to='images/', max_length=1000, null=True, blank=True)
+	name             = models.CharField(max_length=40)
+	description      = models.TextField(max_length=550)
+	size             = models.IntegerField(max_length=6, choices=sizes, default=SQUARE_SIZE)
+	image            = models.ImageField(upload_to='images/', max_length=1000, null=True, blank=True)
 
-	order = models.IntegerField(default=-10)
-	expired = models.BooleanField(default=False)
-	on = models.BooleanField(default=False)
+	order            = models.IntegerField(default=-10)
+	expired          = models.BooleanField(default=False)
+	on               = models.BooleanField(default=False)
 
 	expireation_date = models.DateTimeField('expires on')
-	publish_date = models.DateTimeField('date published', default=datetime.datetime.now() )
+	publish_date     = models.DateTimeField('date published', default=datetime.datetime.now() )
 
 
 	def __unicode__(self):
