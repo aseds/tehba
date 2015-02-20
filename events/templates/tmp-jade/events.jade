@@ -1,0 +1,133 @@
+	body
+		#whole.center
+			#right
+				#logo
+
+			#left
+				.row1
+					.normal
+						img(src="http://www.tehraner.com/images/sara-abri-mohsen-gallery-21jan15.jpg")
+						p hi hello this is something here
+
+					.normal
+					.normal
+
+				.row2
+					.wide
+
+				.row3
+					.normal
+						.little
+						.little
+					.normal
+					.normal
+
+				.row4
+					.half
+					.half
+
+
+
+
+-----------------------------------------
+
+
+body {
+	padding: 0;
+	margin: 0;
+	background: black;
+}
+
+
+.center {
+	margin: 0 auto;
+}
+
+
+#whole {
+	width: 960px;
+	height: 1600px;
+	background: #ffb37a;
+	padding-top: 5px;
+}
+
+#right, #left {
+	margin: 10px 10px 0 0;
+}
+
+#right {
+	width: 210px;
+	height: 500px;
+	background: #3b70af;
+}
+
+#left {
+	width: 696px;
+	height: 900px;
+	background: #7da7d3;
+}
+
+#right {
+	padding: 10px 0px;
+}
+
+
+.row1, .row2, .row3, .row4 {
+	float: right;		
+	background: #757bd0; // banafsh
+	border-bottom: 2px dashed black;
+	padding: 10px 0px;
+}
+
+
+
+#right, #left, .normal, .wide, .half {
+	float: right;
+}
+
+.normal, .wide, .half {
+	margin: 0px 10px;	
+}
+
+.normal {
+	width: 210px;
+	height: 210px;
+	background: tomato;
+	position: relative;
+	border: 1px dashed white;
+}
+
+.wide {
+	width: 674px;
+	height: 150px;
+	background: tomato;
+	border: 1px dashed black;
+}
+
+.half {
+	width: 326px;
+	max-height: 120px;
+	height: 100%;
+	background: tomato;
+	border: 1px dashed green;
+}
+
+.normal img {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+#logo {
+	width: 100%;
+	height: 150px;
+	background: #72c85f;
+}
+
+
+// mAKe the width of each row to be 
+// 100% and the width of wide event to 
+// be 100% then make the percent of
+// height of each row and each event
+// then convert to 'em's.
+

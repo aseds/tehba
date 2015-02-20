@@ -1,17 +1,22 @@
 {% extends 'base.html' %}
 
 {% block content %}
-	{% if today_events %} 
-		{% for event in today_events %} 
-			<div class="{{ event.size }}">
-				<h1>{{ event.name }}</h1>
-				<p>{{ event.description }}</p>
-				<img src="{{ event.img.url }}">
-			</div>
-		{% endfor %}
-	{% else %}
-	<p>No events are available.</p>
-	{% endif %}
-
-
+	<div id="whole" class="center">
+		<div id="right">
+			<div id="logo"></div>
+		</div>
+		<div id="left">
+			{% if today_events %} 
+				{% for event in today_events %} 
+					<div class="{{ event.size }}">
+						<h1>{{ event.name }}</h1>
+						<img src="{{ event.img.url }}">
+						<p>{{ event.description }}</p>
+					</div>					
+				{% endfor %}
+			{% else %}
+			<p>No events are available.</p>
+			{% endif %}
+		</div>
+	</div>
 {% endblock %}
