@@ -26,7 +26,7 @@ class Event(models.Model):
 	expired          = models.BooleanField(default=False)
 	on               = models.BooleanField(default=False)
 
-	expireation_date = models.DateTimeField('expires on')
+	expiration_date = models.DateTimeField('expires on')
 	publish_date     = models.DateTimeField('date published', default=datetime.datetime.now() )
 
 
