@@ -1,5 +1,9 @@
 """
+<<<<<<< HEAD
 Django settings for tehraner-now_tehba project.
+=======
+Django settings for tehba-tehraner project.
+>>>>>>> a7e84249bcc3a82ccbf0ec466ab2bd6a184dcb76
 
 For more information on this file, see
 https://docs.djangoproject.com/en/1.7/topics/settings/
