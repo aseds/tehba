@@ -1,4 +1,11 @@
 {% extends 'base.html' %}
+{% load staticfiles %}
+
+
+{% block in_head %}
+<link rel="stylesheet" type="text/css" href="{% static 'events/style.css' %}" />
+{% endblock%}
+
 
 {% block content %}
 	<div id="whole" class="center">
@@ -8,14 +15,16 @@
 		<div id="left">
 			{% if today_events %} 
 				{% for event in today_events %} 
-					<div class="{{ event.size }}">
+					<div class="{{ event.get_size_display }}">
 						<h1>{{ event.name }}</h1>
-						<img src="{{ event.img.url }}">
+						{% if event.image %}
+							<img src="{{ event.image.url }}">
+						{% endif %}
 						<p>{{ event.description }}</p>
 					</div>					
 				{% endfor %}
 			{% else %}
-			<p>No events are available.</p>
+				<p>No events are available</p>
 			{% endif %}
 		</div>
 	</div>
