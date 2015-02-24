@@ -26,7 +26,7 @@ class Event(models.Model):
 	expired          = models.BooleanField(default=False)
 	on               = models.BooleanField(default=False)
 
-	expireation_date = models.DateTimeField('expires on')
+	expiration_date = models.DateTimeField('expires on')
 	publish_date     = models.DateTimeField('date published', default=datetime.datetime.now() )
 
 
@@ -34,7 +34,7 @@ class Event(models.Model):
 		return self.name 
 
 	def is_reliable(self):
-		return self.expireation_date > timezone.now()
+		return self.expiration_date > timezone.now()
 	is_reliable.boolean = True
 	is_reliable.short_description = 'still active?'
 
