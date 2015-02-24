@@ -47,7 +47,7 @@ body {
 
 .square, .wide, .half, .small {
 	float: left;
-	margin: 0px 10px;	
+	margin: 0px 9px;	
 	overflow: hidden;
 	text-align: right;
 	position: relative;
