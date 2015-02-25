@@ -2,8 +2,8 @@ body {
 	padding: 0;
 	margin: 0;
 	background: black;
+	text-align: center;
 }
-
 
 .center {
 	margin: 0 auto;
@@ -11,7 +11,7 @@ body {
 
 
 #whole {
-	width: 960px;
+	width: 935px;
 	height: 1600px;
 	background: #ffb37a;
 	padding-top: 5px;
