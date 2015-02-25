@@ -23,7 +23,6 @@ class Event(models.Model):
 	image            = models.ImageField(upload_to='images/', max_length=1000, null=True, blank=True)
 
 	order            = models.IntegerField(default=-10)
-	expired          = models.BooleanField(default=False)
 	on               = models.BooleanField(default=False)
 
 	expiration_date = models.DateTimeField('expires on')
